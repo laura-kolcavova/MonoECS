@@ -9,7 +9,9 @@ namespace MonoECS.Ecs.Systems
         private World _world;
         private EntitySubscription _entitySubscription;
 
-        protected IEnumerable<int> ActiveEntities => _entitySubscription.Entities;  
+        protected IEnumerable<int> ActiveEntities => _entitySubscription.Entities;
+
+        protected IEnumerable<int> Entities => _world.EntityManager.Entities;
 
         protected EntitySystem(Aspect aspect)
         {

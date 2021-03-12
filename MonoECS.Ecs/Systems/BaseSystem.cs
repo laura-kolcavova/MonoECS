@@ -8,6 +8,8 @@ namespace MonoECS.Ecs.Systems
     {
         private World _world;
 
+        protected IEnumerable<int> Entities => _world.EntityManager.Entities;
+
         protected BaseSystem()
         {
         }
